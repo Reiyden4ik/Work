@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостиничные Услуги</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS файла -->
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в нашу гостиницу</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#rooms">Номера</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services">
+        <h2>Наши Услуги</h2>
+        <p>Мы предлагаем широкий спектр услуг, включая:</p>
+        <ul>
+            <li>Комфортабельные номера</li>
+            <li>Бесплатный Wi-Fi</li>
+            <li>Завтрак включен</li>
+            <li>Трансфер из аэропорта</li>
+        </ul>
+    </section>
+
+    <section id="rooms">
+        <h2>Детали Номеров</h2>
+        <article>
+            <h3>Стандартный Номер</h3>
+            <img src="standard-room.jpg" alt="Стандартный Номер">
+            <p>Комфортабельный стандартный номер с одной двуспальной кроватью.</p>
+            <p>Цена: 3000 руб./ночь</p>
+        </article>
+        <article>
+            <h3>Люкс</h3>
+            <img src="luxury-room.jpg" alt="Люкс">
+            <p>Роскошный номер с отдельной гостиной и ванной.</p>
+            <p>Цена: 5000 руб./ночь</p>
+        </article>
+    </section>
+
+    <section id="contact">
+        <h2>Контактная Форма</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Гостиница. Все права защищены.</p>
+    </footer>
+</body>
+</html>
