@@ -63,11 +63,12 @@
         .service {
             text-align: center;
         }
-        .review-form {
+        .review-form, .login-form {
             display: flex;
             flex-direction: column;
         }
-        .review-form input, .review-form textarea {
+        .review-form input, .review-form textarea,
+        .login-form input {
             margin-bottom: 10px;
             padding: 10px;
             border: 1px solid #ccc;
@@ -152,6 +153,14 @@
             </form>
         </section>
         <section>
+            <h2>Вход в личный кабинет</h2>
+            <form class="login-form" onsubmit="login(event)">
+                <input type="text" placeholder="Имя пользователя" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+        </section>
+        <section>
             <h2>Контактная информация</h2>
             <p>Контактное лицо: Татьяна</p>
             <p>Телефон: <a href="tel:+79184044592">+7 (918) 404-45-92</a></p>
@@ -194,6 +203,15 @@
 
             event.target.reset();
             stars.forEach(s => s.classList.remove('selected'));
+        }
+
+        function login(event) {
+            event.preventDefault();
+            const username = event.target[0].value;
+            const password = event.target[1].value;
+            // Здесь можно добавить логику для проверки имени пользователя и пароля
+            alert(`Вход выполнен для пользователя: ${username}`);
+            event.target.reset();
         }
     </script>
 </body>
