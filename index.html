@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гостиница АГАВА</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             color: #333;
             margin: 0;
@@ -42,6 +43,26 @@
             max-width: 100%;
             height: auto;
         }
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            min-width: 100%;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+        }
+        .service {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -62,10 +83,29 @@
         </section>
         <section>
             <h2>Галерея</h2>
-            <div>
-                <img src="photo1.jpg" alt="Фото 1">
-                <img src="photo2.jpg" alt="Фото 2">
-                <img src="photo3.jpg" alt="Фото 3">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="photo1.jpg" alt="Фото 1"></div>
+                    <div class="slide"><img src="photo2.jpg" alt="Фото 2"></div>
+                    <div class="slide"><img src="photo3.jpg" alt="Фото 3"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Услуги</h2>
+            <div class="services">
+                <div class="service">
+                    <i class="fas fa-bed fa-2x"></i>
+                    <p>Комфортабельные номера</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-wifi fa-2x"></i>
+                    <p>Бесплатный Wi-Fi</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-coffee fa-2x"></i>
+                    <p>Кафе и ресторан</p>
+                </div>
             </div>
         </section>
         <section>
@@ -76,5 +116,15 @@
     <footer>
         <p>&copy; 2023 Гостиница АГАВА</p>
     </footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+        }, 3000);
+    </script>
 </body>
 </html>
