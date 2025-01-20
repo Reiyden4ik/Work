@@ -73,6 +73,18 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .stars {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .star {
+            font-size: 20px;
+            cursor: pointer;
+            color: #ccc;
+        }
+        .star.selected {
+            color: gold;
+        }
     </style>
 </head>
 <body>
@@ -121,14 +133,22 @@
         </section>
         <section>
             <h2>Отзывы клиентов</h2>
-            <p>Здесь будут размещены отзывы наших клиентов.</p>
-            <p>"Отличное место для отдыха! Рекомендую!" - Анна</p>
-            <p>"Комфортные номера и дружелюбный персонал." - Сергей</p>
+            <div id="reviews">
+                <p>"Отличное место для отдыха! Рекомендую!" - Анна</p>
+                <p>"Комфортные номера и дружелюбный персонал." - Сергей</p>
+            </div>
         </section>
         <section>
             <h2>Оставьте свой отзыв</h2>
-            <form class="review-form">
+            <form class="review-form" onsubmit="submitReview(event)">
                 <input type="text" placeholder="Ваше имя" required>
+                <div class="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
                 <textarea placeholder="Ваш отзыв" rows="4" required></textarea>
                 <button type="submit">Отправить отзыв</button>
             </form>
@@ -152,6 +172,31 @@
             currentIndex = (currentIndex + 1) % totalSlides;
             slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
         }, 3000);
+
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-value');
+                stars.forEach(s => s.classList.remove('selected'));
+                for (let i = 0; i < rating; i++) {
+                    stars[i].classList.add('selected');
+                }
+            });
+        });
+
+        function submitReview(event) {
+            event.preventDefault();
+            const name = event.target[0].value;
+            const rating = [...stars].find(s => s.classList.contains('selected'))?.getAttribute('data-value') || '0';
+            const reviewText = event.target[2].value;
+
+            const reviewElement = document.createElement('p');
+            reviewElement.textContent = `${name} (Оценка: ${rating} звёзд): ${reviewText}`;
+            document.getElementById('reviews').appendChild(reviewElement);
+
+            event.target.reset();
+            stars.forEach(s => s.classList.remove('selected'));
+        }
     </script>
 </body>
 </html>
