@@ -63,6 +63,16 @@
         .service {
             text-align: center;
         }
+        .review-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .review-form input, .review-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -114,6 +124,14 @@
             <p>Здесь будут размещены отзывы наших клиентов.</p>
             <p>"Отличное место для отдыха! Рекомендую!" - Анна</p>
             <p>"Комфортные номера и дружелюбный персонал." - Сергей</p>
+        </section>
+        <section>
+            <h2>Оставьте свой отзыв</h2>
+            <form class="review-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <textarea placeholder="Ваш отзыв" rows="4" required></textarea>
+                <button type="submit">Отправить отзыв</button>
+            </form>
         </section>
         <section>
             <h2>Контактная информация</h2>
