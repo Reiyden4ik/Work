@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостевой дом "Агава"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef; /* Светлый фон */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .login-button {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            min-width: 100%;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+        }
+        .service {
+            text-align: center;
+        }
+        .review-form, .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .review-form input, .review-form textarea,
+        .login-form input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .stars {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .star {
+            font-size: 20px;
+            cursor: pointer;
+            color: #ccc;
+        }
+        .star.selected {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Гостевой дом "Агава"</h1>
+        <button class="login-button" onclick="location.href='login.html'">
+            <i class="fas fa-sign-in-alt"></i>
+        </button>
+    </header>
+    <main>
+        <section>
+            <h2>Описание</h2>
+            <p>Добро пожаловать в Гостевой дом "Агава"! Мы предлагаем комфортные номера и отличный сервис. Наша гостиница расположена в живописном районе на улице Хвойная, 44, где вы сможете насладиться природой и спокойствием.</p>
+            <p>Мы стремимся предоставить нашим гостям лучший опыт, предлагая широкий спектр услуг и удобств, чтобы сделать ваше пребывание незабываемым.</p>
+        </section>
+        <section>
+            <h2>Галерея</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="photo1.jpg" alt="Фото 1"></div>
+                    <div class="slide"><img src="photo2.jpg" alt="Фото 2"></div>
+                    <div class="slide"><img src="photo3.jpg" alt="Фото 3"></div>
+                    <div class="slide"><img src="photo4.jpg" alt="Фото 4"></div>
+                    <div class="slide"><img src="photo5.jpg" alt="Фото 5"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Услуги</h2>
+            <div class="services">
+                <div class="service">
+                    <i class="fas fa-bed fa-2x"></i>
+                    <p>Комфортабельные номера</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-wifi fa-2x"></i>
+                    <p>Бесплатный Wi-Fi</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-coffee fa-2x"></i>
+                    <p>Кафе и ресторан</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-parking fa-2x"></i>
+                    <p>Парковка</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Отзывы клиентов</h2>
+            <div id="reviews">
+                <!-- Отзывы будут добавлены здесь -->
+            </div>
+        </section>
+        <section>
+            <h2>Оставьте свой отзыв</h2>
+            <form class="review-form" onsubmit="submitReview(event)">
+                <input type="text" placeholder="Ваше имя" required>
+                <div class="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <textarea placeholder="Ваш отзыв" rows="4" required></textarea>
+                <button type="submit">Отправить отзыв</button>
+            </form>
+        </section>
+        <section>
+            <h2>Контактная информация</h2>
+            <p>Контактное лицо: Татьяна</p>
+            <p>Телефон: <a href="tel:+79184044592">+7 (918) 404-45-92</a></p>
+            <p><a href="https://wa.me/79184044592"><img src="whatsapp-logo.png" alt="WhatsApp" style="width: 30px;"> Написать в WhatsApp</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+        }, 3000);
+
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-value');
+                stars.forEach(s => s.classList.remove('selected'));
+                for (let i = 0; i < rating; i++) {
+                    stars[i].classList.add('selected');
+                }
+            });
+        });
+
+        function submitReview(event) {
+            event.preventDefault();
+            const name = event.target[0].value;
+            const rating = [...stars].find(s => s.classList.contains('selected'))?.getAttribute('data-value') || '0';
+            const reviewText = event.target[2].value;
+
+            const reviewElement = document.createElement('p');
+            reviewElement.textContent = `${name} (Оценка: ${rating} звёзд): ${reviewText}`;
+            document.getElementById('reviews').appendChild(reviewElement);
+
+            event.target.reset();
+            stars.forEach(s => s.classList.remove('selected'));
+        }
+    </script>
+</body>
+</html>
