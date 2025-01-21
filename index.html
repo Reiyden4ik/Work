@@ -21,16 +21,6 @@
             text-align: center;
             position: relative;
         }
-        .login-button {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 20px;
-        }
         main {
             padding: 20px;
         }
@@ -74,12 +64,11 @@
         .service {
             text-align: center;
         }
-        .review-form, .login-form {
+        .review-form {
             display: flex;
             flex-direction: column;
         }
-        .review-form input, .review-form textarea,
-        .login-form input {
+        .review-form input, .review-form textarea {
             margin-bottom: 10px;
             padding: 10px;
             border: 1px solid #ccc;
@@ -102,9 +91,6 @@
 <body>
     <header>
         <h1>Гостевой дом "Агава"</h1>
-        <button class="login-button" onclick="location.href='login.html'">
-            <i class="fas fa-sign-in-alt"></i>
-        </button>
     </header>
     <main>
         <section>
@@ -116,11 +102,13 @@
             <h2>Галерея</h2>
             <div class="slider">
                 <div class="slides">
-                    <div class="slide"><img src="photo1.jpg" alt="Фото 1"></div>
-                    <div class="slide"><img src="photo2.jpg" alt="Фото 2"></div>
-                    <div class="slide"><img src="photo3.jpg" alt="Фото 3"></div>
-                    <div class="slide"><img src="photo4.jpg" alt="Фото 4"></div>
-                    <div class="slide"><img src="photo5.jpg" alt="Фото 5"></div>
+                    <div class="slide"><img src="gallery1.jpg" alt="Фото 1"></div>
+                    <div class="slide"><img src="gallery2.jpg" alt="Фото 2"></div>
+                    <div class="slide"><img src="gallery3.jpg" alt="Фото 3"></div>
+                    <div class="slide"><img src="gallery4.jpg" alt="Фото 4"></div>
+                    <div class="slide"><img src="gallery5.jpg" alt="Фото 5"></div>
+                    <div class="slide"><img src="gallery6.jpg" alt="Фото 6"></div>
+                    <div class="slide"><img src="gallery7.jpg" alt="Фото 7"></div>
                 </div>
             </div>
         </section>
@@ -181,27 +169,6 @@
             </div>
         </section>
         <section>
-            <h2>Услуги</h2>
-            <div class="services">
-                <div class="service">
-                    <i class="fas fa-bed fa-2x"></i>
-                    <p>Комфортабельные номера</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-wifi fa-2x"></i>
-                    <p>Бесплатный Wi-Fi</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-coffee fa-2x"></i>
-                    <p>Кафе и ресторан</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-parking fa-2x"></i>
-                    <p>Парковка</p>
-                </div>
-            </div>
-        </section>
-        <section>
             <h2>Отзывы клиентов</h2>
             <div id="reviews">
                 <!-- Отзывы будут добавлены здесь -->
@@ -234,13 +201,16 @@
     </footer>
     <script>
         let currentIndex = 0;
-        const slides = document.querySelector('.slides');
-        const totalSlides = document.querySelectorAll('.slide').length;
+        const sliders = document.querySelectorAll('.slider');
+        sliders.forEach(slider => {
+            const slides = slider.querySelector('.slides');
+            const totalSlides = slider.querySelectorAll('.slide').length;
 
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
-        }, 3000);
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+            }, 3000);
+        });
 
         const stars = document.querySelectorAll('.star');
         stars.forEach(star => {
