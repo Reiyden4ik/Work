@@ -280,10 +280,7 @@
             document.querySelectorAll('.star').forEach(s => s.classList.remove('selected'));
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            localStorage.removeItem('reviews'); // Удаление всех отзывов при загрузке страницы
-            loadReviews();
-        });
+        document.addEventListener('DOMContentLoaded', loadReviews);
     </script>
 </body>
 </html>
