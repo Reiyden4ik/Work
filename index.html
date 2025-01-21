@@ -21,16 +21,6 @@
             text-align: center;
             position: relative;
         }
-        .login-button {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 20px;
-        }
         main {
             padding: 20px;
         }
@@ -67,6 +57,21 @@
         .slide {
             min-width: 100%;
         }
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .nav-button {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
         .services {
             display: flex;
             justify-content: space-around;
@@ -74,12 +79,11 @@
         .service {
             text-align: center;
         }
-        .review-form, .login-form {
+        .review-form {
             display: flex;
             flex-direction: column;
         }
-        .review-form input, .review-form textarea,
-        .login-form input {
+        .review-form input, .review-form textarea {
             margin-bottom: 10px;
             padding: 10px;
             border: 1px solid #ccc;
@@ -102,9 +106,6 @@
 <body>
     <header>
         <h1>Гостевой дом "Агава"</h1>
-        <button class="login-button" onclick="location.href='login.html'">
-            <i class="fas fa-sign-in-alt"></i>
-        </button>
     </header>
     <main>
         <section>
@@ -116,32 +117,89 @@
             <h2>Галерея</h2>
             <div class="slider">
                 <div class="slides">
-                    <div class="slide"><img src="photo1.jpg" alt="Фото 1"></div>
-                    <div class="slide"><img src="photo2.jpg" alt="Фото 2"></div>
-                    <div class="slide"><img src="photo3.jpg" alt="Фото 3"></div>
-                    <div class="slide"><img src="photo4.jpg" alt="Фото 4"></div>
-                    <div class="slide"><img src="photo5.jpg" alt="Фото 5"></div>
+                    <div class="slide"><img src="gallery1.jpg" alt="Фото 1"></div>
+                    <div class="slide"><img src="gallery2.jpg" alt="Фото 2"></div>
+                    <div class="slide"><img src="gallery3.jpg" alt="Фото 3"></div>
+                    <div class="slide"><img src="gallery4.jpg" alt="Фото 4"></div>
+                    <div class="slide"><img src="gallery5.jpg" alt="Фото 5"></div>
+                    <div class="slide"><img src="gallery6.jpg" alt="Фото 6"></div>
+                    <div class="slide"><img src="gallery7.jpg" alt="Фото 7"></div>
+                </div>
+                <div class="navigation">
+                    <button class="nav-button" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="nav-button" onclick="moveSlide(1)">&#10095;</button>
                 </div>
             </div>
         </section>
         <section>
-            <h2>Услуги</h2>
-            <div class="services">
-                <div class="service">
-                    <i class="fas fa-bed fa-2x"></i>
-                    <p>Комфортабельные номера</p>
+            <h2>Комфорт</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="comfort1.jpg" alt="Комфорт 1"></div>
+                    <div class="slide"><img src="comfort2.jpg" alt="Комфорт 2"></div>
+                    <div class="slide"><img src="comfort3.jpg" alt="Комфорт 3"></div>
+                    <div class="slide"><img src="comfort4.jpg" alt="Комфорт 4"></div>
+                    <div class="slide"><img src="comfort5.jpg" alt="Комфорт 5"></div>
+                    <div class="slide"><img src="comfort6.jpg" alt="Комфорт 6"></div>
+                    <div class="slide"><img src="comfort7.jpg" alt="Комфорт 7"></div>
                 </div>
-                <div class="service">
-                    <i class="fas fa-wifi fa-2x"></i>
-                    <p>Бесплатный Wi-Fi</p>
+                <div class="navigation">
+                    <button class="nav-button" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="nav-button" onclick="moveSlide(1)">&#10095;</button>
                 </div>
-                <div class="service">
-                    <i class="fas fa-coffee fa-2x"></i>
-                    <p>Кафе и ресторан</p>
+            </div>
+        </section>
+        <section>
+            <h2>Комфорт+</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="comfort_plus1.jpg" alt="Комфорт+ 1"></div>
+                    <div class="slide"><img src="comfort_plus2.jpg" alt="Комфорт+ 2"></div>
+                    <div class="slide"><img src="comfort_plus3.jpg" alt="Комфорт+ 3"></div>
+                    <div class="slide"><img src="comfort_plus4.jpg" alt="Комфорт+ 4"></div>
+                    <div class="slide"><img src="comfort_plus5.jpg" alt="Комфорт+ 5"></div>
+                    <div class="slide"><img src="comfort_plus6.jpg" alt="Комфорт+ 6"></div>
+                    <div class="slide"><img src="comfort_plus7.jpg" alt="Комфорт+ 7"></div>
                 </div>
-                <div class="service">
-                    <i class="fas fa-parking fa-2x"></i>
-                    <p>Парковка</p>
+                <div class="navigation">
+                    <button class="nav-button" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="nav-button" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Люкс</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="lux1.jpg" alt="Люкс 1"></div>
+                    <div class="slide"><img src="lux2.jpg" alt="Люкс 2"></div>
+                    <div class="slide"><img src="lux3.jpg" alt="Люкс 3"></div>
+                    <div class="slide"><img src="lux4.jpg" alt="Люкс 4"></div>
+                    <div class="slide"><img src="lux5.jpg" alt="Люкс 5"></div>
+                    <div class="slide"><img src="lux6.jpg" alt="Люкс 6"></div>
+                    <div class="slide"><img src="lux7.jpg" alt="Люкс 7"></div>
+                </div>
+                <div class="navigation">
+                    <button class="nav-button" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="nav-button" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Премиум</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="premium1.jpg" alt="Премиум 1"></div>
+                    <div class="slide"><img src="premium2.jpg" alt="Премиум 2"></div>
+                    <div class="slide"><img src="premium3.jpg" alt="Премиум 3"></div>
+                    <div class="slide"><img src="premium4.jpg" alt="Премиум 4"></div>
+                    <div class="slide"><img src="premium5.jpg" alt="Премиум 5"></div>
+                    <div class="slide"><img src="premium6.jpg" alt="Премиум 6"></div>
+                    <div class="slide"><img src="premium7.jpg" alt="Премиум 7"></div>
+                </div>
+                <div class="navigation">
+                    <button class="nav-button" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="nav-button" onclick="moveSlide(1)">&#10095;</button>
                 </div>
             </div>
         </section>
@@ -178,25 +236,17 @@
     </footer>
     <script>
         let currentIndex = 0;
-        const slides = document.querySelector('.slides');
-        const totalSlides = document.querySelectorAll('.slide').length;
 
-const nextButton = document.createElement('button');
-nextButton.textContent = '→';
-nextButton.onclick = () => {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
-};
-slider.appendChild(nextButton);
+        function moveSlide(direction) {
+            const sliders = document.querySelectorAll('.slider');
+            sliders.forEach(slider => {
+                const slides = slider.querySelector('.slides');
+                const totalSlides = slider.querySelectorAll('.slide').length;
 
-const prevButton = document.createElement('button');
-prevButton.textContent = '←';
-prevButton.onclick = () => {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
-};
-slider.appendChild(prevButton);
-
+                currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+                slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+            });
+        }
 
         const stars = document.querySelectorAll('.star');
         stars.forEach(star => {
