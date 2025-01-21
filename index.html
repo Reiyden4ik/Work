@@ -21,6 +21,16 @@
             text-align: center;
             position: relative;
         }
+        .login-button {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
         main {
             padding: 20px;
         }
@@ -64,11 +74,12 @@
         .service {
             text-align: center;
         }
-        .review-form {
+        .review-form, .login-form {
             display: flex;
             flex-direction: column;
         }
-        .review-form input, .review-form textarea {
+        .review-form input, .review-form textarea,
+        .login-form input {
             margin-bottom: 10px;
             padding: 10px;
             border: 1px solid #ccc;
@@ -91,6 +102,9 @@
 <body>
     <header>
         <h1>Гостевой дом "Агава"</h1>
+        <button class="login-button" onclick="location.href='login.html'">
+            <i class="fas fa-sign-in-alt"></i>
+        </button>
     </header>
     <main>
         <section>
@@ -102,69 +116,32 @@
             <h2>Галерея</h2>
             <div class="slider">
                 <div class="slides">
-                    <div class="slide"><img src="gallery1.jpg" alt="Фото 1"></div>
-                    <div class="slide"><img src="gallery2.jpg" alt="Фото 2"></div>
-                    <div class="slide"><img src="gallery3.jpg" alt="Фото 3"></div>
-                    <div class="slide"><img src="gallery4.jpg" alt="Фото 4"></div>
-                    <div class="slide"><img src="gallery5.jpg" alt="Фото 5"></div>
-                    <div class="slide"><img src="gallery6.jpg" alt="Фото 6"></div>
-                    <div class="slide"><img src="gallery7.jpg" alt="Фото 7"></div>
+                    <div class="slide"><img src="photo1.jpg" alt="Фото 1"></div>
+                    <div class="slide"><img src="photo2.jpg" alt="Фото 2"></div>
+                    <div class="slide"><img src="photo3.jpg" alt="Фото 3"></div>
+                    <div class="slide"><img src="photo4.jpg" alt="Фото 4"></div>
+                    <div class="slide"><img src="photo5.jpg" alt="Фото 5"></div>
                 </div>
             </div>
         </section>
         <section>
-            <h2>Комфорт</h2>
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide"><img src="comfort1.jpg" alt="Комфорт 1"></div>
-                    <div class="slide"><img src="comfort2.jpg" alt="Комфорт 2"></div>
-                    <div class="slide"><img src="comfort3.jpg" alt="Комфорт 3"></div>
-                    <div class="slide"><img src="comfort4.jpg" alt="Комфорт 4"></div>
-                    <div class="slide"><img src="comfort5.jpg" alt="Комфорт 5"></div>
-                    <div class="slide"><img src="comfort6.jpg" alt="Комфорт 6"></div>
-                    <div class="slide"><img src="comfort7.jpg" alt="Комфорт 7"></div>
+            <h2>Услуги</h2>
+            <div class="services">
+                <div class="service">
+                    <i class="fas fa-bed fa-2x"></i>
+                    <p>Комфортабельные номера</p>
                 </div>
-            </div>
-        </section>
-        <section>
-            <h2>Комфорт+</h2>
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide"><img src="comfort_plus1.jpg" alt="Комфорт+ 1"></div>
-                    <div class="slide"><img src="comfort_plus2.jpg" alt="Комфорт+ 2"></div>
-                    <div class="slide"><img src="comfort_plus3.jpg" alt="Комфорт+ 3"></div>
-                    <div class="slide"><img src="comfort_plus4.jpg" alt="Комфорт+ 4"></div>
-                    <div class="slide"><img src="comfort_plus5.jpg" alt="Комфорт+ 5"></div>
-                    <div class="slide"><img src="comfort_plus6.jpg" alt="Комфорт+ 6"></div>
-                    <div class="slide"><img src="comfort_plus7.jpg" alt="Комфорт+ 7"></div>
+                <div class="service">
+                    <i class="fas fa-wifi fa-2x"></i>
+                    <p>Бесплатный Wi-Fi</p>
                 </div>
-            </div>
-        </section>
-        <section>
-            <h2>Люкс</h2>
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide"><img src="lux1.jpg" alt="Люкс 1"></div>
-                    <div class="slide"><img src="lux2.jpg" alt="Люкс 2"></div>
-                    <div class="slide"><img src="lux3.jpg" alt="Люкс 3"></div>
-                    <div class="slide"><img src="lux4.jpg" alt="Люкс 4"></div>
-                    <div class="slide"><img src="lux5.jpg" alt="Люкс 5"></div>
-                    <div class="slide"><img src="lux6.jpg" alt="Люкс 6"></div>
-                    <div class="slide"><img src="lux7.jpg" alt="Люкс 7"></div>
+                <div class="service">
+                    <i class="fas fa-coffee fa-2x"></i>
+                    <p>Кафе и ресторан</p>
                 </div>
-            </div>
-        </section>
-        <section>
-            <h2>Премиум</h2>
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide"><img src="premium1.jpg" alt="Премиум 1"></div>
-                    <div class="slide"><img src="premium2.jpg" alt="Премиум 2"></div>
-                    <div class="slide"><img src="premium3.jpg" alt="Премиум 3"></div>
-                    <div class="slide"><img src="premium4.jpg" alt="Премиум 4"></div>
-                    <div class="slide"><img src="premium5.jpg" alt="Премиум 5"></div>
-                    <div class="slide"><img src="premium6.jpg" alt="Премиум 6"></div>
-                    <div class="slide"><img src="premium7.jpg" alt="Премиум 7"></div>
+                <div class="service">
+                    <i class="fas fa-parking fa-2x"></i>
+                    <p>Парковка</p>
                 </div>
             </div>
         </section>
@@ -201,16 +178,19 @@
     </footer>
     <script>
         let currentIndex = 0;
-        const sliders = document.querySelectorAll('.slider');
-        sliders.forEach(slider => {
-            const slides = slider.querySelector('.slides');
-            const totalSlides = slider.querySelectorAll('.slide').length;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
 
+            let currentIndex = 0;
             setInterval(() => {
                 currentIndex = (currentIndex + 1) % totalSlides;
-                slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
-            }, 3000);
-        });
+            let currentIndex = 0;
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+        }, 3000);
 
         const stars = document.querySelectorAll('.star');
         stars.forEach(star => {
