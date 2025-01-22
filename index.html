@@ -252,9 +252,10 @@
             const reviewsContainer = document.getElementById('reviews');
             localStorage.removeItem('reviews');
             reviewsContainer.innerHTML = '';
-            reviews.forEach(review => {
-                const reviewElement = document.createElement('p');
-                reviewElement.innerHTML = `${review.name} (Оценка: ${review.rating} звёзд): ${review.text} `;
+                reviews.forEach(review => {
+                    const reviewElement = document.createElement('div');
+                    reviewElement.innerHTML = `<strong>${review.name}</strong> ${'★'.repeat(review.rating)}<br>${review.text}`;
+
                 for (let i = 0; i < review.rating; i++) {
                     reviewElement.innerHTML += '&#9733;'; // Звезды
                 }
