@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33c1bac3-f8c7-40a9-bd70-e7ac5c0dea07" name="Changes" comment="done">
-      <change beforePath="$PROJECT_DIR$/Danya/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="33c1bac3-f8c7-40a9-bd70-e7ac5c0dea07" name="Changes" comment="done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +35,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Даниил Иванов\Desktop\RD4K(Git)\RD4K_working" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Rd4k" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RD4K_working" />
@@ -174,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737582921656</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="done">
+      <option name="closed" value="true" />
+      <created>1737583778968</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1737583778968</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
