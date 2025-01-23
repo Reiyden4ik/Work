@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Гостевой дом "Агава"</title>
+    <title>Гостевой дом "Агава" - Комфорт и Уют</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
@@ -110,12 +110,12 @@
     <main>
         <section>
             <h2>Описание</h2>
-            <p>Добро пожаловать в Гостевой дом "Агава"! Мы предлагаем комфортные номера и отличный сервис. Наша гостиница расположена в живописном районе В поселке Лазоревская, на улице Хвойная, 44, где вы сможете насладиться природой и спокойствием.</p>
+            <p>Добро пожаловать в Гостевой дом "Агава"! Мы предлагаем комфортные номера и отличный сервис. Наша гостиница расположена в живописном районе на улице Хвойная, 44, где вы сможете насладиться природой и спокойствием. Мы рады предложить вам уникальный опыт отдыха.</p>
             <p>Мы стремимся предоставить нашим гостям лучший опыт, предлагая широкий спектр услуг и удобств, чтобы сделать ваше пребывание незабываемым.</p>
         </section>
         <section>
             <h2>Галерея</h2>
-            <p>В нашей галерее представлены фотографии различных уголков нашего гостевого дома, чтобы вы могли оценить атмосферу и комфорт, который мы предлагаем.</p>
+            <p>В нашей галерее представлены фотографии различных уголков нашего гостевого дома, чтобы вы могли оценить атмосферу и комфорт, который мы предлагаем. Откройте для себя красоту нашего места!</p>
             <div class="slider" id="gallery-slider">
                 <div class="slides">
                     <div class="slide"><img src="gallery1.jpg" alt="Фото 1"></div>
@@ -134,7 +134,7 @@
         </section>
         <section>
             <h2>Комфорт</h2>
-            <p>Наши номера обеспечивают максимальный комфорт и уют. Каждый номер оборудован всем необходимым для приятного отдыха.</p>
+            <p>Наши номера обеспечивают максимальный комфорт и уют. Каждый номер оборудован всем необходимым для приятного отдыха, включая бесплатный Wi-Fi и кондиционер.</p>
             <div class="slider" id="comfort-slider">
                 <div class="slides">
                     <div class="slide"><img src="comfort1.jpg" alt="Комфорт 1"></div>
@@ -153,7 +153,7 @@
         </section>
         <section>
             <h2>Комфорт+</h2>
-            <p>Номера категории "Комфорт+" предлагают дополнительные удобства и услуги для наших гостей, чтобы сделать ваше пребывание еще более приятным.</p>
+            <p>Номера категории "Комфорт+" предлагают дополнительные удобства и услуги для наших гостей, чтобы сделать ваше пребывание еще более приятным. Наслаждайтесь эксклюзивными предложениями!</p>
             <div class="slider" id="comfort-plus-slider">
                 <div class="slides">
                     <div class="slide"><img src="comfort_plus1.jpg" alt="Комфорт+ 1"></div>
@@ -172,7 +172,7 @@
         </section>
         <section>
             <h2>Люкс</h2>
-            <p>Наши люксы предлагают роскошные условия для отдыха, включая отдельные зоны для сна и отдыха, а также высококачественные удобства.</p>
+            <p>Наши люксы предлагают роскошные условия для отдыха, включая отдельные зоны для сна и отдыха, а также высококачественные удобства, такие как спа-процедуры и личный консьерж.</p>
             <div class="slider" id="lux-slider">
                 <div class="slides">
                     <div class="slide"><img src="lux1.jpg" alt="Люкс 1"></div>
@@ -191,7 +191,7 @@
         </section>
         <section>
             <h2>Премиум</h2>
-            <p>Номера премиум-класса предлагают исключительный комфорт и услуги, чтобы удовлетворить самые высокие требования наших гостей.</p>
+            <p>Номера премиум-класса предлагают исключительный комфорт и услуги, чтобы удовлетворить самые высокие требования наших гостей. Идеально для романтических выходных!</p>
             <div class="slider" id="premium-slider">
                 <div class="slides">
                     <div class="slide"><img src="premium1.jpg" alt="Премиум 1"></div>
@@ -209,17 +209,23 @@
             </div>
         </section>
         <section>
-            <h2>Услуги</h2>
-            <p>Мы предлагаем широкий спектр услуг, включая:</p>
-            <ul>
-                <li>Трансфер из аэропорта</li>
-                <li>Экскурсии по окрестностям</li>
-                <li>Услуги прачечной</li>
-                <li>Круглосуточная рецепция</li>
-                <li>Бесплатный Wi-Fi</li>
-            </ul>
+            <h2>Отзывы</h2>
+            <div id="reviews">
+                <!-- Отзывы будут добавлены здесь -->
+            </div>
+            <form class="review-form" onsubmit="submitReview(event)">
+                <input type="text" placeholder="Ваше имя" required>
+                <div class="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <textarea placeholder="Ваш отзыв" rows="4" required></textarea>
+                <button type="submit">Отправить отзыв</button>
+            </form>
         </section>
-
         <section>
             <h2>Контактная информация</h2>
             <p>Контактное лицо: Татьяна</p>
@@ -244,12 +250,10 @@
         function loadReviews() {
             const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
             const reviewsContainer = document.getElementById('reviews');
-            localStorage.removeItem('reviews');
             reviewsContainer.innerHTML = '';
-                reviews.forEach(review => {
-                    const reviewElement = document.createElement('div');
-                    reviewElement.innerHTML = `<strong>${review.name}</strong> ${'★'.repeat(review.rating)}<br>${review.text}`;
-
+            reviews.forEach(review => {
+                const reviewElement = document.createElement('p');
+                reviewElement.innerHTML = `${review.name} (Оценка: ${review.rating} звёзд): ${review.text} `;
                 for (let i = 0; i < review.rating; i++) {
                     reviewElement.innerHTML += '&#9733;'; // Звезды
                 }
