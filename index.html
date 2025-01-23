@@ -226,13 +226,7 @@
             </div>
             <form class="review-form" onsubmit="submitReview(event)">
                 <input type="text" placeholder="Ваше имя" required>
-                <div class="stars">
-                    <span class="star" data-value="1">&#9733;</span>
-                    <span class="star" data-value="2">&#9733;</span>
-                    <span class="star" data-value="3">&#9733;</span>
-                    <span class="star" data-value="4">&#9733;</span>
-                    <span class="star" data-value="5">&#9733;</span>
-                </div>
+                <!-- Удалена система оценивания звездами -->
                 <textarea placeholder="Ваш отзыв" rows="4" required></textarea>
                 <button type="submit">Отправить отзыв</button>
             </form>
@@ -266,6 +260,20 @@
                 reviews.forEach(review => {
                     const reviewElement = document.createElement('div');
                     reviewElement.innerHTML = `<strong>${review.name}</strong> ${'★'.repeat(review.rating)}<br>${review.text}`;
+
+                for (let i = 0; i < review.rating; i++) {
+                    reviewElement.innerHTML += '&#9733;'; // Звезды
+                }
+                reviewsContainer.appendChild(reviewElement);
+            });
+        }
+
+        function submitReview(event) {
+            event.preventDefault();
+            const name = event.target[0].value;
+            // Удалена логика получения рейтинга
+          reviewElement.innerHTML = `<strong>${review.name}</strong><br>${review.text}`; // Удалены звезды
+
 
                 for (let i = 0; i < review.rating; i++) {
                     reviewElement.innerHTML += '&#9733;'; // Звезды
